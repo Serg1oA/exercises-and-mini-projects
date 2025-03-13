@@ -1,4 +1,4 @@
-// https://javascript.info/variables
+/* ------------------- https://javascript.info/variables -------------------
 
 // Task 1
 let admin;
@@ -14,8 +14,8 @@ let currentUser = "John";
 // Task 3
 // Answer: Yes for BIRTHDAY, No for AGE.
 
-/*************************************************/
-// https://javascript.info/function-basics
+
+// ------------------- https://javascript.info/function-basics -------------------
 
 // Task 1
 // Answer: No, there is no difference in the behavior of the two variants.
@@ -62,3 +62,26 @@ while (isNaN(Number(nInput)) || nInput < 1) {
 }
 
 alert(pow(xInput, nInput));
+
+*/
+// ------------------- https://javascript.info/arrow-functions-basics -------------------
+// Task: replace Function Expressions with arrow functions in the code below
+/* function ask(question, yes, no) {
+    if (confirm(question)) yes();
+    else no();
+}
+
+ask(
+    "Do you agree?",
+    function() { alert("You agreed."); },
+    function() { alert("You canceled the execution."); }
+);
+*/
+
+let ask = (question, yes, no) => confirm(question) ? yes() : no();
+
+ask(
+    "Do you agree?",
+    () => alert("You agreed."),
+    () => alert("You canceled the execution.")
+);
